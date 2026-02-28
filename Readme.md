@@ -65,7 +65,7 @@ financial-analyzer --batch folder_path
 
 ## Environment Setup
 
-Create a `.env` file in project root:
+Create a `.env` file in project root or Save the Google gemini api key as an system environment variable and name it as GEMINI_API_KEY:
 
 ```
 GOOGLE_API_KEY=your_api_key_here
