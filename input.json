@@ -1,0 +1,16 @@
+{
+  "IncomeStmt": {
+    "TotalRevenue": 1500000,
+    "NetProfit": 300000
+  },
+  "BalanceSheetData": {
+    "AssetsTotal": 2500000,
+    "LiabilitiesTotal": 1500000,
+    "ShareholdersEquity": 1000000
+  },
+  "CashFlows": {
+    "CashFromOperations": 210000,
+    "CashFromInvesting": -80000,
+    "CashFromFinancing": -30000
+  }
+}
