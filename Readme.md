@@ -28,7 +28,7 @@ pip install ai-financial-analyzer-v1==1.0.1
 ```
 ## Setup
 
-After installation you will see your path folder location in cmd, copy it and paste it to the user variable path of system environment variable 
+After installation you will see your path folder location in cmd, copy it and paste it to the user variable path of system environment variable & 
 the path may look like this :
 ```bash
 C:\Users\Pranav\AppData\Local\....\Scripts
