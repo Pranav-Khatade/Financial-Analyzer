@@ -24,7 +24,7 @@ Built with:
 ## Installation
 
 ```bash
-pip install ai-financial-analyzer-v1
+pip install ai-financial-analyzer-v1==1.0.1
 ```
 
 ---
