@@ -1,6 +1,4 @@
-from pathlib import Path
-
-readme = r'''<div align="center">
+<div align="center">
 
 # AI Financial Analyzer
 
@@ -15,16 +13,35 @@ A Python command-line tool for automating key parts of financial statement analy
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-16a34a?style=for-the-badge" alt="MIT License"></a>
 </p>
 
-<p>
-  <a href="#-features">Features</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-usage">Usage</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-configuration">Configuration</a> •
-  <a href="#-contributing">Contributing</a>
-</p>
-
 </div>
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Why This Project?](#why-this-project)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Quick Start](#quick-start)
+  - [Install from PyPI](#option-a--install-from-pypi)
+  - [Run from Source](#option-b--run-from-source)
+- [Configuration](#configuration)
+- [Usage](#usage)
+  - [Analyze an Input File](#analyze-one-input-file)
+  - [Choose a PDF Report Location](#choose-a-pdf-report-location)
+  - [Disable PDF Generation](#disable-pdf-generation)
+  - [Disable Graph Generation](#disable-graph-generation)
+  - [Batch Processing](#process-a-folder-in-batch-mode)
+  - [CLI Reference](#cli-reference)
+- [Input Data](#input-data)
+- [Architecture](#architecture)
+- [Output](#output)
+- [Development and Verification](#development-and-verification)
+- [Roadmap](#roadmap-ideas)
+- [Limitations and Responsible Use](#limitations-and-responsible-use)
+- [Contributing](#contributing)
+- [Issues and Feedback](#issues-and-feedback)
+- [License](#license)
+- [Author](#author)
 
 ---
 
@@ -63,7 +80,7 @@ Financial information is often spread across raw figures that need to be checked
 
 The exact conclusions depend on the quality and completeness of the supplied data. The tool is intended as an analysis aid, not as an audit or a source of guaranteed investment advice.
 
-## ✨ Features
+## Features
 
 | Capability | What it does | Benefit |
 |---|---|---|
@@ -79,7 +96,7 @@ The exact conclusions depend on the quality and completeness of the supplied dat
 
 > **Interpretation note:** AI-generated explanations and risk scores can be incomplete or incorrect. Review the underlying data, formulas, and assumptions before acting on any result.
 
-## 🧰 Technology stack
+## Technology stack
 
 | Technology | Role |
 |---|---|
@@ -89,7 +106,7 @@ The exact conclusions depend on the quality and completeness of the supplied dat
 | ReportLab | PDF report generation |
 | `setuptools` / `wheel` | Python package build and distribution |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option A — Install from PyPI
 
@@ -147,7 +164,7 @@ Set up the API key as described in [Configuration](#-configuration), then run:
 financial-analyzer --input input.json
 ```
 
-## 🔑 Configuration
+## Configuration
 
 The application uses a Google Gemini API key for AI-assisted insights.
 
@@ -190,7 +207,7 @@ financial-analyzer --input input.json
 - Use `.env.example` only as a template containing a placeholder.
 - If a key is exposed, revoke it and create a replacement.
 
-## 🖥️ Usage
+## Usage
 
 The commands below reflect the CLI options documented by the project. Run `financial-analyzer --help` in your installed environment to confirm the options supported by your installed version.
 
@@ -236,7 +253,7 @@ financial-analyzer --batch folder_path
 | `--no-graphs` | Disable graph generation |
 | `--batch <folder>` | Process inputs from a folder |
 
-## 📄 Input data
+## Input data
 
 The repository includes an `input.json` example. Use it as the starting point for preparing your own data, and preserve the structure expected by the version of the application you are running.
 
@@ -267,7 +284,7 @@ Before running an analysis, check that:
 
 For the precise schema, refer to [`input.json`](./input.json) and the validation/normalization modules in [`app/`](./app/).
 
-## 🏗️ Architecture
+## Architecture
 
 The codebase is organized into focused modules. At a high level, the responsibilities are:
 
@@ -314,7 +331,7 @@ Financial-Analyzer/
 
 Some files or subdirectories may change as the project evolves; the repository is the source of truth for the current layout.
 
-## 📊 Output
+## Output
 
 Depending on the options and input provided, the workflow can produce:
 
@@ -328,7 +345,7 @@ Depending on the options and input provided, the workflow can produce:
 
 The exact fields and presentation depend on the current implementation and the supplied input. Do not interpret a risk score as a validated credit rating or investment recommendation.
 
-## 🧪 Development and verification
+## Development and verification
 
 To set up a local development environment:
 
@@ -362,7 +379,7 @@ Review the generated files and console output. Confirm that the input is accepte
 
 > Automated test commands and coverage figures are intentionally not listed here because they should be added only after the corresponding test suite and results have been verified.
 
-## 🗺️ Roadmap ideas
+## Roadmap ideas
 
 Potential areas for future improvement include:
 
@@ -377,7 +394,7 @@ Potential areas for future improvement include:
 
 These are possible next steps, not claims that the features are already implemented.
 
-## ⚠️ Limitations and responsible use
+## Limitations and responsible use
 
 - Output quality depends on the accuracy, completeness, and consistency of the input data.
 - AI-generated insights may contain errors, omissions, or unsupported interpretations.
@@ -385,7 +402,7 @@ These are possible next steps, not claims that the features are already implemen
 - This project is for educational and analytical assistance. It is not financial, investment, tax, accounting, or legal advice.
 - Verify results independently before using them in business, lending, investment, or compliance decisions.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, bug reports, and thoughtful suggestions are welcome.
 
@@ -400,17 +417,17 @@ Contributions, bug reports, and thoughtful suggestions are welcome.
 
 For bug reports, include a minimal reproducible example and remove confidential financial data and API keys before sharing logs or input files.
 
-## 🐛 Issues and feedback
+## Issues and feedback
 
 - **Source code:** [Pranav-Khatade/Financial-Analyzer](https://github.com/Pranav-Khatade/Financial-Analyzer)
 - **Report a bug / request a feature:** [GitHub Issues](https://github.com/Pranav-Khatade/Financial-Analyzer/issues)
 - **Package:** [ai-financial-analyzer-v1 on PyPI](https://pypi.org/project/ai-financial-analyzer-v1/)
 
-## 📜 License
+## License
 
 This project is distributed under the MIT License. See [`LICENSE`](./LICENSE) for the full license text.
 
-## 👤 Author
+## Author
 
 **Pranav Khatade**
 
@@ -426,8 +443,3 @@ This project is distributed under the MIT License. See [`LICENSE`](./LICENSE) fo
 If this project is useful to you, consider giving the repository a ⭐.
 
 </div>
-'''
-
-path = Path("/mnt/data/README_Financial_Analyzer.md")
-path.write_text(readme, encoding="utf-8")
-print(f"Created {path} ({len(readme.splitlines())} lines, {path.stat().st_size:,} bytes)")
